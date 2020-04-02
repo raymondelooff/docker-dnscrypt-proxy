@@ -11,10 +11,10 @@ ADD https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/$DNSCRYPT_PROXY
 RUN tar -xzf dnscrypt-proxy-linux_x86_64-$DNSCRYPT_PROXY_VERSION.tar.gz
 
 
-FROM scratch
+FROM gcr.io/distroless/base
 
 VOLUME /config
 
 COPY --from=builder /root/linux-x86_64/dnscrypt-proxy /
 
-CMD ["/dnscrypt-proxy"]
+ENTRYPOINT ["/dnscrypt-proxy"]
