@@ -4,7 +4,7 @@ WORKDIR /root/
 
 RUN apk --no-cache add tar
 
-ENV DNSCRYPT_PROXY_VERSION 2.0.42
+ENV DNSCRYPT_PROXY_VERSION 2.0.43
 
 ADD https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/$DNSCRYPT_PROXY_VERSION/dnscrypt-proxy-linux_x86_64-$DNSCRYPT_PROXY_VERSION.tar.gz .
 
